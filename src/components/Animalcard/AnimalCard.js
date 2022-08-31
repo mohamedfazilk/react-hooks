@@ -1,10 +1,11 @@
 import React from 'react'
 import './AnimalCard.css'
 
-const AnimalCard = () => {
+const AnimalCard = (props) => {
+    const {name} = props
   return (
     <div>
-      <h2>  Animal Cards</h2>
+      <h2>  {name}</h2>
     </div>
   )
 }
