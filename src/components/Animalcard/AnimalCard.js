@@ -1,39 +1,39 @@
 import React from 'react'
-import './AnimalCard.css'
 import PropTypes from 'prop-types';
+import AnimalDetails from '../AnimalDetails';
+import './AnimalCard.css'
+import Card from '../Card/Card';
 
 
 
-
-const AnimalCard = ({
-    
-    diet,
-    name,
-    size
-  
-}) => {
+const AnimalCard = ({ name, size, ...props }) => {
 
     return (
-        <div className='animal-wrapper'>
-            <h2>  {name}</h2>
-            <h3>{diet.join(', ')}.</h3>
-            <h4>{size}kg</h4>
-        </div>
+        
+            <Card title="Animal">
+                <h3>{name}</h3>
+                <div>{size}kg</div>
+                <AnimalDetails
+                    {...props}
+                />
+            </Card>
+
+      
     )
 }
 
 AnimalCard.propTypes = {
-    
+
     diet: PropTypes.arrayOf(PropTypes.string).isRequired,
     name: PropTypes.string.isRequired,
     size: PropTypes.number.isRequired,
-    }
+}
 
-    AnimalCard.defaultProps = {
-        additional: {
-         notes: 'No Additional Information'
-        }
-        }
+AnimalCard.defaultProps = {
+    additional: {
+        notes: 'No Additional Information'
+    }
+}
 
 export default AnimalCard
 

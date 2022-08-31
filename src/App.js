@@ -15,7 +15,8 @@ function App() {
             diet={animal.diet}
             key={animal.name}
             name={animal.name}
-            size={animal.size} />
+            size={animal.size}
+            scientificName ={animal.scientificName} />
         )
       })}
 
