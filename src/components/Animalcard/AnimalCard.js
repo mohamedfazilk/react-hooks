@@ -6,11 +6,13 @@ const AnimalCard = ({
     diet,
     name,
     scientificName,
-    size,showAdditional
+    size,
+    showAdditional
 }) => {
 
     return (
-        <div>
+        <div className='animal-wr
+        apper'>
             <h2>  {name}</h2>
             <h3>{scientificName}</h3>
             <h4>{size}kg</h4>
