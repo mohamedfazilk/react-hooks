@@ -1,4 +1,4 @@
-export default [
+const data = [
     {
     name: 'Lion',
     scientificName: 'Panthero leo',
@@ -27,3 +27,4 @@ export default [
     }
 }
 ]
+export default  data
