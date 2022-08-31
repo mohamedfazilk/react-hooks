@@ -2,7 +2,7 @@ const data = [
     {
     name: 'Lion',
     scientificName: 'Panthero leo',
-    size: '140',
+    size: 140,
     diet: ['meat'],
     },
 

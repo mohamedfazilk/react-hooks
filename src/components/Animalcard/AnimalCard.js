@@ -39,5 +39,11 @@ AnimalCard.propTypes = {
     size: PropTypes.number.isRequired,
     }
 
+    AnimalCard.defaultProps = {
+        additional: {
+         notes: 'No Additional Information'
+        }
+        }
+
 export default AnimalCard
 
