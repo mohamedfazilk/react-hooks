@@ -1,5 +1,7 @@
 import React from 'react'
 import './AnimalCard.css'
+import PropTypes from 'prop-types';
+
 
 const AnimalCard = ({
     additional,
@@ -11,8 +13,7 @@ const AnimalCard = ({
 }) => {
 
     return (
-        <div className='animal-wr
-        apper'>
+        <div className='animal-wrapper'>
             <h2>  {name}</h2>
             <h3>{scientificName}</h3>
             <h4>{size}kg</h4>
