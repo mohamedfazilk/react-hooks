@@ -2,22 +2,31 @@ import React from "react";
 import data from "./components/data";
 import AnimalCard from "./components/Animalcard/AnimalCard";
 
-function App() {
-  const alertInformation = Object.entries(additional)
-  .map(information => `${information[0]}: ${information[1]}`)
-  .join('\n');
- alert(alertInformation)
 
+const showAdditional = (additional) => {
+  const alertInformation = Object.entries(additional)
+    .map(information => `${information[0]}: ${information[1]}`)
+    .join('\n');
+  alert(alertInformation)
+}
+
+function App() {
+  
   return (
     <div className="wrapper">
       <h1>Animals</h1>
-      {data.map((animal)=>{
-        return(
+      {data.map((animal) => {
+        return (
           <AnimalCard key={animal.name}
-          name={animal.name}
-          scientificName={animal.scientificName} 
-          size={animal.size}
-          diet={animal.diet}/>
+          additional={animal.additional}
+
+            name={animal.name}
+            scientificName={animal.scientificName}
+           
+            diet={animal.diet} 
+             showAdditional={showAdditional}
+             size={animal.size}/>
+             
         )
 
       })}

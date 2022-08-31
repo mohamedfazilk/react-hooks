@@ -6,7 +6,7 @@ const AnimalCard = ({
     diet,
     name,
     scientificName,
-    size
+    size,showAdditional
 }) => {
 
     return (
@@ -14,7 +14,9 @@ const AnimalCard = ({
             <h2>  {name}</h2>
             <h3>{scientificName}</h3>
             <h4>{size}kg</h4>
+           
             <div>{diet.join(', ')}.</div>
+            <button onClick={() => showAdditional(additional)}>More Info</button>
 
         </div>
     )
