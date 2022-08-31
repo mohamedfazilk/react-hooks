@@ -3,6 +3,8 @@ import './AnimalCard.css'
 import PropTypes from 'prop-types';
 
 
+
+
 const AnimalCard = ({
     additional,
     diet,
@@ -24,6 +26,18 @@ const AnimalCard = ({
         </div>
     )
 }
+
+AnimalCard.propTypes = {
+    additional: PropTypes.shape({
+     link: PropTypes.string,
+     notes: PropTypes.string
+    }),
+    diet: PropTypes.arrayOf(PropTypes.string).isRequired,
+    name: PropTypes.string.isRequired,
+    scientificName: PropTypes.string.isRequired,
+    showAdditional: PropTypes.func.isRequired,
+    size: PropTypes.number.isRequired,
+    }
 
 export default AnimalCard
 
