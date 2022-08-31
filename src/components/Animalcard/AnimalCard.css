@@ -1,0 +1,12 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+   
+    flex-wrap: wrap;
+}
+
+.wrapper h1 {
+    text-align: center;
+    width: 100%;
+   }
