@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
-export default function Card({ children,details, title }) {
+export default function Card({ children,detail, title }) {
 return(
  <div className="card">
  <div className="card-details">
  <h2>{title}</h2>
-    {details}
+    {detail}
  </div>
  {children}
  </div>
