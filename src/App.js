@@ -11,7 +11,10 @@ function App() {
 
   return (
     <div className="wrapper">
-     <Alert/>
+     <Alert title="Items Not Added" type="error"></Alert>
+     <div>Your items are out of stock.</div>
+ 
+     
 
 
     </div>
